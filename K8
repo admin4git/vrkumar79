@@ -1,0 +1,16 @@
+Deployments
+LB Service
+        apiVersion: v1
+        kind: service
+        metadata:
+          name: lap-LoadBalancer
+        spec:
+          type: LoadBalancer
+          ports:
+          - port: 80
+            protocol: TCP
+          selector:
+            run: nginx
+---
+
+
